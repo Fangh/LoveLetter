@@ -7,14 +7,19 @@ using DG.Tweening;
 
 public class OvrAvatarHand : MonoBehaviour, IAvatarPart
 {
-	public GameObject currentTouchedObject = null;
-	public GameObject currentGrabbedObject = null;
+	private GameObject currentTouchedObject = null;
+	private GameObject currentGrabbedObject = null;
 	public OVRInput.Controller controller;
-	//public OVRHaptics ovrA;
+	public AudioClip vibratesound;
+	private byte[] vibrateTab; 
+
+	void Start()
+	{
+		vibrateTab = createByteTab ();
+	}
+
 	public void Update()
 	{
-		//Queue(OVRHapticsClip clip): 
-
 		Debug.Log ("SUMMON BALL");
 		if (OVRInput.GetDown (OVRInput.Button.Two, controller))
 		{
@@ -39,6 +44,8 @@ public class OvrAvatarHand : MonoBehaviour, IAvatarPart
 				currentGrabbedObject.transform.localPosition = Vector3.zero;
 				currentGrabbedObject.GetComponent<Rigidbody> ().useGravity = false;
 				currentGrabbedObject.GetComponent<Rigidbody> ().isKinematic = true;
+				int channel = controller == OVRInput.Controller.LTouch ? 0 : 1;
+				OVRHaptics.Channels [channel].Mix(new OVRHapticsClip(vibrateTab, 320));
 
 				Debug.Log ("ATTRAPER");
 			}
@@ -77,6 +84,16 @@ public class OvrAvatarHand : MonoBehaviour, IAvatarPart
 			Debug.Log ("UNTOUCH BALL");
 			currentTouchedObject = null;
 		}
+	}
+
+	public byte[] createByteTab()
+	{
+		byte[] tab = new byte[320];
+		for (int i = 0; i < tab.Length; i++)
+		{
+			tab[i] = (byte)((i%2)*255);
+		}
+		return tab;
 	}
 
     float alpha = 1.0f;
