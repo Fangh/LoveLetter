@@ -7,7 +7,7 @@ public class Ball : MonoBehaviour {
     public OvrAvatarHand hand;
     Material mat;
     Color stdColor = Color.red;
-    Color heldColor = new Color (0.3f, 1, 0.3f);
+    Color heldColor = new Color (0.25f, 0.9f, 0.25f);
 
 	// Use this for initialization
 	void Start () {
