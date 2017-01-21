@@ -91,7 +91,7 @@ public class OvrAvatarHand : MonoBehaviour, IAvatarPart
 		byte[] tab = new byte[320];
 		for (int i = 0; i < tab.Length; i++)
 		{
-			tab[i] = (byte)((i%4)*255);
+			tab[i] = (byte)((Mathf.Sin(i)*255));
 		}
 		return tab;
 	}
