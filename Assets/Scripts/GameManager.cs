@@ -40,23 +40,16 @@ public class GameManager : MonoBehaviour
 			}
 		} 
 		else 
-		{
-			if (!(P1Playground.GetComponent<Playground> ().validGameState && P2Playground.GetComponent<Playground> ().validGameState)) 
-			{
-				GameIsStarted = false;
-				ball.transform.position = new Vector3 (100, 100, 100);
-			}
-            else
-            {
-                if (score >= scoreThreshold) Debug.Log("Game complete");
-            }
+		{			
+            if (score >= scoreThreshold) 
+				Debug.Log("Game complete");
 		}
 	}
 
 	void StartGame()
 	{
 		GameIsStarted = true;
-		RespawnBall ();		
+		RespawnBall ();
 	}
 
 	public void RespawnBall()

@@ -59,8 +59,10 @@ public class OvrAvatarHand : MonoBehaviour, IAvatarPart
 				currentGrabbedObject.transform.parent = null;
 				currentGrabbedObject.GetComponent<Rigidbody> ().useGravity = true;
 				currentGrabbedObject.GetComponent<Rigidbody> ().isKinematic = false;
+
 				currentGrabbedObject.GetComponent<Rigidbody> ().velocity = OVRInput.GetLocalControllerVelocity (controller);
 				currentGrabbedObject.GetComponent<Rigidbody> ().angularVelocity = OVRInput.GetLocalControllerAngularVelocity (controller).eulerAngles;
+
 				currentGrabbedObject = null;
 
                 proximityFeedback = false;
