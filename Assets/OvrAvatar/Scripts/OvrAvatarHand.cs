@@ -14,6 +14,7 @@ public class OvrAvatarHand : MonoBehaviour, IAvatarPart
 	private byte[] hapticForceMax;
 	private byte[] hapticForceLow;
     const int stdVibrationDuration = 180; // En Hertz
+    bool proximityFeedback = true;
 
 	void Start()
 	{
@@ -63,6 +64,8 @@ public class OvrAvatarHand : MonoBehaviour, IAvatarPart
 				currentGrabbedObject.GetComponent<Rigidbody> ().angularVelocity = OVRInput.GetLocalControllerAngularVelocity (controller).eulerAngles;
 				currentGrabbedObject = null;
 
+                proximityFeedback = false;
+                Invoke("restoreFeedback", 0.5f);
 				Debug.Log ("LACHER");
 				
 			}
@@ -80,7 +83,7 @@ public class OvrAvatarHand : MonoBehaviour, IAvatarPart
 
 	public void OnTriggerStay(Collider other)
 	{
-		if (other.tag == "Ball" && currentGrabbedObject == null) 
+		if (proximityFeedback && other.tag == "Ball" && currentGrabbedObject == null) 
 		{
 			int channel = controller == OVRInput.Controller.LTouch ? 0 : 1;
 			OVRHaptics.Channels [channel].Mix(new OVRHapticsClip(hapticForceLow, 10));			
@@ -111,6 +114,11 @@ public class OvrAvatarHand : MonoBehaviour, IAvatarPart
     public void UpdatePose(OvrAvatarDriver.ControllerPose pose)
     {
 		
+    }
+
+    void restoreFeedback()
+    {
+        proximityFeedback = true;
     }
 
     public void SetAlpha(float alpha)
