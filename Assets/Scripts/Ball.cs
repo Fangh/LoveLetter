@@ -22,10 +22,14 @@ public class Ball : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent<OvrAvatarHand>() != null)
+        if (other.CompareTag("DeadZone")) GameManager.Instance.RespawnBall();
+        else
         {
-            hand = other.GetComponent<OvrAvatarHand>();
-            mat.color = heldColor;
+            if (other.GetComponent<OvrAvatarHand>() != null)
+            {
+                hand = other.GetComponent<OvrAvatarHand>();
+                mat.color = heldColor;
+            }
         }
     }
 
