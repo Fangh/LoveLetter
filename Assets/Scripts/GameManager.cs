@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public int scoreThreshold = 3;
     public bool ballThrown = false;
     public int score = 0;
+	public GameObject instructions;
 
 	void Awake()
 	{
@@ -40,15 +41,19 @@ public class GameManager : MonoBehaviour
 			}
 		} 
 		else 
-		{			
-            if (score >= scoreThreshold) 
+		{
+            if (score >= scoreThreshold)
+            {
+                LevelManager.Instance.SetUpNewLevel(LevelManager.Instance.currentLevel+1);
 				Debug.Log("Game complete");
+            }
 		}
 	}
 
 	void StartGame()
 	{
 		GameIsStarted = true;
+		instructions.SetActive(false);
 		RespawnBall ();
 	}
 
@@ -56,10 +61,17 @@ public class GameManager : MonoBehaviour
 	{
 		//Debug.Log ("SUMMON BALL");
 		//ball.transform.DOMove (transform.position, 0.5f).SetEase (Ease.OutQuint);
+        GameManager.Instance.score = 0;
 		GameObject.Instantiate (explosionFX, ball.transform.position, Quaternion.identity);
 		ball.transform.position = transform.position;
 		GameObject.Instantiate (explosionFX, ball.transform.position, Quaternion.identity);
 		ball.GetComponent<Rigidbody> ().velocity = Vector3.zero;
 		ball.GetComponent<Rigidbody> ().angularVelocity = Vector3.zero;
+	}
+
+	public void OnAvatarLoad(GameObject leftHand)
+	{
+		leftHand.GetComponentInChildren<SkinnedMeshRenderer> ().enabled = false;
+		
 	}
 }
