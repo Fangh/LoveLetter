@@ -36,6 +36,11 @@ public class OvrAvatarHand : MonoBehaviour, IAvatarPart
 			}
 			if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger, controller))
             {
+                if (currentTouchedObject.GetComponent<Ball>().hand == this)
+                {
+                    GameManager.Instance.ballThrown = false;
+                    GameManager.Instance.score++;
+                }
 				currentGrabbedObject = currentTouchedObject;
 				currentGrabbedObject.transform.parent = transform;
 				currentGrabbedObject.transform.localPosition = Vector3.zero;

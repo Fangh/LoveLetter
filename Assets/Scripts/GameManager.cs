@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
 	bool GameIsStarted = false;
 	GameObject ball;
 	public GameObject explosionFX;
+    public bool ballThrown = false;
+    public int score = 0;
 
 	void Awake()
 	{
