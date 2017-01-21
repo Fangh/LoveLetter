@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour
 		{
             if (score >= scoreThreshold)
             {
-                LevelManager.Instance.SetUpNewLevel();
+                LevelManager.Instance.SetUpNewLevel(LevelManager.Instance.currentLevel+1);
 				Debug.Log("Game complete");
             }
 		}
