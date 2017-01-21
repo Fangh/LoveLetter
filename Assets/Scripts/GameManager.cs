@@ -40,9 +40,12 @@ public class GameManager : MonoBehaviour
 			}
 		} 
 		else 
-		{			
-            if (score >= scoreThreshold) 
+		{
+            if (score >= scoreThreshold)
+            {
+                LevelManager.Instance.SetUpNewLevel();
 				Debug.Log("Game complete");
+            }
 		}
 	}
 
@@ -56,6 +59,7 @@ public class GameManager : MonoBehaviour
 	{
 		//Debug.Log ("SUMMON BALL");
 		//ball.transform.DOMove (transform.position, 0.5f).SetEase (Ease.OutQuint);
+        GameManager.Instance.score = 0;
 		GameObject.Instantiate (explosionFX, ball.transform.position, Quaternion.identity);
 		ball.transform.position = transform.position;
 		GameObject.Instantiate (explosionFX, ball.transform.position, Quaternion.identity);
