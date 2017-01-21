@@ -21,14 +21,9 @@ public class OvrAvatarHand : MonoBehaviour, IAvatarPart
 
 	public void Update()
 	{
-		Debug.Log ("SUMMON BALL");
 		if (OVRInput.GetDown (OVRInput.Button.Two, controller))
 		{
-			GameObject ball = GameObject.FindGameObjectWithTag ("Ball");
-			//ball.transform.DOMove (transform.position, 1f).SetEase (Ease.InCubic);
-			ball.transform.position = transform.position;
-			ball.GetComponent<Rigidbody> ().velocity = Vector3.zero;
-			ball.GetComponent<Rigidbody> ().angularVelocity = Vector3.zero;
+			GameManager.Instance.RespawnBall ();
 		}
 		if (currentGrabbedObject == null) 
 		{
