@@ -1,15 +1,17 @@
 fileFormatVersion: 2
-guid: 19796c159ceda0949adbc532cc14c72c
-timeCreated: 1485000320
+guid: 02f74ce3c82afae4abc1c2795ed42bd5
+timeCreated: 1485002092
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: //RootNode
+    100002: PRO_ISLAND
     400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: GERIDON_BOL3
+    400002: PRO_ISLAND
+    2300000: PRO_ISLAND
+    3300000: PRO_ISLAND
+    4300000: PRO_ISLAND
   materials:
     importMaterials: 1
     materialName: 0

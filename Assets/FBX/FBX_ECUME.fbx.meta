@@ -1,15 +1,20 @@
 fileFormatVersion: 2
-guid: 19796c159ceda0949adbc532cc14c72c
-timeCreated: 1485000320
+guid: 240da0a4dbef5734d9e2e23b985c76f8
+timeCreated: 1485002092
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: //RootNode
+    100002: PRO_SEA
     400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: GERIDON_BOL3
+    400002: PRO_SEA
+    2300000: PRO_SEA
+    2300002: //RootNode
+    3300000: PRO_SEA
+    3300002: //RootNode
+    4300000: PRO_SEA
+    4300002: pPlane2
   materials:
     importMaterials: 1
     materialName: 0

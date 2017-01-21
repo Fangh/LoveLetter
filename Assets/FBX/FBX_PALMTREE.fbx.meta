@@ -1,15 +1,17 @@
 fileFormatVersion: 2
-guid: 19796c159ceda0949adbc532cc14c72c
-timeCreated: 1485000320
+guid: 3856d3fd30099e44f816dc8690e53a75
+timeCreated: 1485002092
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: //RootNode
+    100002: PALMIER_N_1
     400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: GERIDON_BOL3
+    400002: PALMIER_N_1
+    2300000: PALMIER_N_1
+    3300000: PALMIER_N_1
+    4300000: PALMIER_N_1
   materials:
     importMaterials: 1
     materialName: 0

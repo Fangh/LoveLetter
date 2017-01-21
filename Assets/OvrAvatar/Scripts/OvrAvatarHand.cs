@@ -33,10 +33,11 @@ public class OvrAvatarHand : MonoBehaviour, IAvatarPart
 			{
 				return;
 			}
-			if (OVRInput.GetDown (OVRInput.Button.One, controller)
-			    && OVRInput.Get (OVRInput.Button.PrimaryIndexTrigger, controller)
-			    || (OVRInput.Get (OVRInput.Button.One, controller)
-			    && OVRInput.GetDown (OVRInput.Button.PrimaryIndexTrigger, controller))) {
+            if (OVRInput.GetDown(OVRInput.Button.One, controller)
+                || OVRInput.GetDown(OVRInput.Button.Two, controller)
+                || OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger, controller)
+                || OVRInput.GetDown(OVRInput.Button.PrimaryHandTrigger, controller))
+            {
 				currentGrabbedObject = currentTouchedObject;
 				currentGrabbedObject.transform.parent = transform;
 				currentGrabbedObject.transform.localPosition = Vector3.zero;
@@ -48,10 +49,12 @@ public class OvrAvatarHand : MonoBehaviour, IAvatarPart
 				Debug.Log ("ATTRAPER");
 			}
 		} 
-		else 
-		{
-			if (!(OVRInput.Get (OVRInput.Button.One, controller)
-			    && OVRInput.Get (OVRInput.Button.PrimaryIndexTrigger, controller))) 
+		else
+        {
+            if (!(OVRInput.GetDown(OVRInput.Button.One, controller)
+                || OVRInput.GetDown(OVRInput.Button.Two, controller)
+                || OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger, controller)
+                || OVRInput.GetDown(OVRInput.Button.PrimaryHandTrigger, controller)))
 			{
 				currentGrabbedObject.transform.parent = null;
 				currentGrabbedObject.GetComponent<Rigidbody> ().useGravity = true;
