@@ -34,10 +34,7 @@ public class OvrAvatarHand : MonoBehaviour, IAvatarPart
 			{
 				return;
 			}
-            if (OVRInput.GetDown(OVRInput.Button.One, controller)
-                || OVRInput.GetDown(OVRInput.Button.Two, controller)
-                || OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger, controller)
-                || OVRInput.GetDown(OVRInput.Button.PrimaryHandTrigger, controller))
+			if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger, controller))
             {
 				currentGrabbedObject = currentTouchedObject;
 				currentGrabbedObject.transform.parent = transform;
@@ -52,10 +49,7 @@ public class OvrAvatarHand : MonoBehaviour, IAvatarPart
 		} 
 		else
         {
-            if (!(OVRInput.Get(OVRInput.Button.One, controller)
-                || OVRInput.Get(OVRInput.Button.Two, controller)
-                || OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger, controller)
-                || OVRInput.Get(OVRInput.Button.PrimaryHandTrigger, controller)))
+			if (!OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger, controller))
 			{
 				currentGrabbedObject.transform.parent = null;
 				currentGrabbedObject.GetComponent<Rigidbody> ().useGravity = true;
@@ -66,8 +60,7 @@ public class OvrAvatarHand : MonoBehaviour, IAvatarPart
 
                 proximityFeedback = false;
                 Invoke("restoreFeedback", 0.5f);
-				Debug.Log ("LACHER");
-				
+				Debug.Log ("LACHER");				
 			}
 		}
 	}
