@@ -11,8 +11,7 @@ public class LevelManager : MonoBehaviour {
     public Vector3[] P1_Offset;
     public Vector3[] P2_Offset;
     public GameObject P1, P2;
-    public Vector3 PlayerHand_DistanceOffset;
-    public Vector3 PlayerHand_UpOffset; // Use Z parameter
+    public GameObject P1_hand, P2_hand;
 
     void Awake()
     {
@@ -21,10 +20,12 @@ public class LevelManager : MonoBehaviour {
 
     public void SetUpNewLevel(int newLevel)
     {
-        levelsContainer[currentLevel].SetActive(false);
-        levelsContainer[newLevel].SetActive(true);
+        if (levelsContainer[currentLevel] != null) levelsContainer[currentLevel].SetActive(false);
+        if (levelsContainer[newLevel] != null) levelsContainer[newLevel].SetActive(true);
         currentLevel = newLevel;
         P1.transform.localPosition = P1_Offset[newLevel];
+        P1_hand.transform.localPosition = P1_Offset[newLevel];
         P2.transform.localPosition = P2_Offset[newLevel];
+        P2_hand.transform.localPosition = P2_Offset[newLevel];
     }
 }
