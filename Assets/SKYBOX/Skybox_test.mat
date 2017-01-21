@@ -114,7 +114,7 @@ Material:
     m_Floats:
     - first:
         name: _AtmosphereThickness
-      second: 0.56
+      second: 0.69
     - first:
         name: _BumpScale
       second: 1
@@ -129,7 +129,7 @@ Material:
       second: 0
     - first:
         name: _Exposure
-      second: 4.03
+      second: 4.24
     - first:
         name: _GlossMapScale
       second: 1
