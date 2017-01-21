@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
 	bool GameIsStarted = false;
 	GameObject ball;
 	public GameObject explosionFX;
+    public int scoreThreshold = 3;
     public bool ballThrown = false;
     public int score = 0;
 
@@ -45,6 +46,10 @@ public class GameManager : MonoBehaviour
 				GameIsStarted = false;
 				ball.transform.position = new Vector3 (100, 100, 100);
 			}
+            else
+            {
+                if (score >= scoreThreshold) Debug.Log("Game complete");
+            }
 		}
 	}
 
