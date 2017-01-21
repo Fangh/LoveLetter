@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public int scoreThreshold = 3;
     public bool ballThrown = false;
     public int score = 0;
+	public GameObject instructions;
 
 	void Awake()
 	{
@@ -52,6 +53,7 @@ public class GameManager : MonoBehaviour
 	void StartGame()
 	{
 		GameIsStarted = true;
+		instructions.SetActive(false);
 		RespawnBall ();
 	}
 
@@ -65,5 +67,11 @@ public class GameManager : MonoBehaviour
 		GameObject.Instantiate (explosionFX, ball.transform.position, Quaternion.identity);
 		ball.GetComponent<Rigidbody> ().velocity = Vector3.zero;
 		ball.GetComponent<Rigidbody> ().angularVelocity = Vector3.zero;
+	}
+
+	public void OnAvatarLoad(GameObject leftHand)
+	{
+		leftHand.GetComponentInChildren<SkinnedMeshRenderer> ().enabled = false;
+		
 	}
 }

@@ -15,6 +15,7 @@ public class OvrAvatarHand : MonoBehaviour, IAvatarPart
 	private byte[] hapticForceLow;
     const int stdVibrationDuration = 180; // En Hertz
     bool proximityFeedback = true;
+	public Transform grabPoint;
 
 	void Start()
 	{
@@ -24,8 +25,9 @@ public class OvrAvatarHand : MonoBehaviour, IAvatarPart
 
 	public void Update()
 	{		
-		if (OVRInput.GetDown (OVRInput.Button.PrimaryThumbstickUp, controller))
+		if (OVRInput.GetDown (OVRInput.Button.PrimaryThumbstick, controller))
 		{
+			//DEBUG MODE !
 			GameManager.Instance.RespawnBall ();
 		}
 		if (currentGrabbedObject == null) 
@@ -42,7 +44,7 @@ public class OvrAvatarHand : MonoBehaviour, IAvatarPart
                     GameManager.Instance.score++;
                 }
 				currentGrabbedObject = currentTouchedObject;
-				currentGrabbedObject.transform.parent = transform;
+				currentGrabbedObject.transform.parent = grabPoint;
 				currentGrabbedObject.transform.localPosition = Vector3.zero;
 				currentGrabbedObject.GetComponent<Rigidbody> ().useGravity = false;
 				currentGrabbedObject.GetComponent<Rigidbody> ().isKinematic = true;
