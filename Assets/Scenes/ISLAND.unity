@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1.6522563, g: 1.7334056, b: 1.7452543, a: 1}
+  m_IndirectSpecularColor: {r: 1.4532645, g: 1.5001086, b: 1.5717885, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -187,13 +187,13 @@ Light:
   m_Enabled: 1
   serializedVersion: 7
   m_Type: 1
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.96044624, b: 0.8897059, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -218,10 +218,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 281034360}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalRotation: {x: 0.5281768, y: -0.24770622, z: 0.07503001, w: 0.8087282}
   m_LocalPosition: {x: -0.36642194, y: 2.9817138, z: -0.102006316}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 63.041004, y: -45.398003, z: -17.736}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -518,15 +518,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000010722032656, guid: f55c22025415d3942838abc04825b43a, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 5.32
+      value: 5.992
       objectReference: {fileID: 0}
     - target: {fileID: 4000010722032656, guid: f55c22025415d3942838abc04825b43a, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2.027
+      value: 1.828
       objectReference: {fileID: 0}
     - target: {fileID: 4000010722032656, guid: f55c22025415d3942838abc04825b43a, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 3.48
+      value: 3.205
       objectReference: {fileID: 0}
     - target: {fileID: 4000010722032656, guid: f55c22025415d3942838abc04825b43a, type: 2}
       propertyPath: m_LocalRotation.x
@@ -534,7 +534,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010722032656, guid: f55c22025415d3942838abc04825b43a, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -0.5567249
+      value: -0.8735076
       objectReference: {fileID: 0}
     - target: {fileID: 4000010722032656, guid: f55c22025415d3942838abc04825b43a, type: 2}
       propertyPath: m_LocalRotation.z
@@ -542,15 +542,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010722032656, guid: f55c22025415d3942838abc04825b43a, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.830697
+      value: -0.4868105
       objectReference: {fileID: 0}
     - target: {fileID: 4000010722032656, guid: f55c22025415d3942838abc04825b43a, type: 2}
       propertyPath: m_RootOrder
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000014093583558, guid: f55c22025415d3942838abc04825b43a, type: 2}
-      propertyPath: m_Name
-      value: Gueridon
       objectReference: {fileID: 0}
     - target: {fileID: 114000011159242026, guid: f55c22025415d3942838abc04825b43a,
         type: 2}
@@ -562,10 +558,6 @@ Prefab:
       propertyPath: P2Playground
       value: 
       objectReference: {fileID: 1888698101}
-    - target: {fileID: 4000010722032656, guid: f55c22025415d3942838abc04825b43a, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -67.9
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f55c22025415d3942838abc04825b43a, type: 2}
   m_IsPrefabParent: 0
@@ -717,23 +709,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!1 &1839049977 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1000014093583558, guid: f55c22025415d3942838abc04825b43a,
-    type: 2}
-  m_PrefabInternal: {fileID: 1445978432}
---- !u!64 &1839049981
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1839049977}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 0
-  m_Mesh: {fileID: 4300000, guid: 19796c159ceda0949adbc532cc14c72c, type: 3}
 --- !u!1 &1888698101 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1000010741252998, guid: 2d02d48357284874486974f3ff6def52,
