@@ -227,15 +227,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 79afa15886f2b9f42b52ab455d431f2f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.1309276
+      value: 6.026
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 79afa15886f2b9f42b52ab455d431f2f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.9689007
+      value: 2.397
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 79afa15886f2b9f42b52ab455d431f2f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.3463626
+      value: 2.401
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 79afa15886f2b9f42b52ab455d431f2f, type: 3}
       propertyPath: m_LocalRotation.x
@@ -261,6 +261,18 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 64b8b1072b0d4d6458ff89b5f0c52485, type: 2}
+    - target: {fileID: 400000, guid: 79afa15886f2b9f42b52ab455d431f2f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.834898
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 79afa15886f2b9f42b52ab455d431f2f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.83489805
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 79afa15886f2b9f42b52ab455d431f2f, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.83489805
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 79afa15886f2b9f42b52ab455d431f2f, type: 3}
   m_IsPrefabParent: 0
@@ -2227,6 +2239,27 @@ MonoBehaviour:
       PublicKeyToken=null
   LeftHandCustomPose: {fileID: 0}
   RightHandCustomPose: {fileID: 0}
+--- !u!1 &1727503024 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: 79afa15886f2b9f42b52ab455d431f2f, type: 3}
+  m_PrefabInternal: {fileID: 390322023}
+--- !u!95 &1727503028
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1727503024}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7444918da5259274cb985dd8dd60aa5f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1888698101
 GameObject:
   m_ObjectHideFlags: 0
