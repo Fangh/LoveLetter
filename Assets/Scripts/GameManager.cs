@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public int scoreThreshold = 3;
     public bool ballThrown = false;
     public int score = 0;
+	public GameObject instructions;
 
 	void Awake()
 	{
@@ -49,6 +50,7 @@ public class GameManager : MonoBehaviour
 	void StartGame()
 	{
 		GameIsStarted = true;
+		instructions.SetActive(false);
 		RespawnBall ();
 	}
 
