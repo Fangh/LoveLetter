@@ -38,11 +38,6 @@ public class OvrAvatarHand : MonoBehaviour, IAvatarPart
 			}
 			if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger, controller))
             {
-                if (currentTouchedObject.GetComponent<Ball>().hand == this)
-                {
-                    GameManager.Instance.ballThrown = false;
-                    GameManager.Instance.score++;
-                }
 				currentGrabbedObject = currentTouchedObject;
 				currentGrabbedObject.transform.parent = grabPoint;
 				currentGrabbedObject.transform.localPosition = Vector3.zero;
@@ -50,6 +45,12 @@ public class OvrAvatarHand : MonoBehaviour, IAvatarPart
 				currentGrabbedObject.GetComponent<Rigidbody> ().isKinematic = true;
 				int channel = controller == OVRInput.Controller.LTouch ? 0 : 1;
 				OVRHaptics.Channels [channel].Mix(new OVRHapticsClip(hapticForceMax, stdVibrationDuration));
+
+				if (currentGrabbedObject.GetComponent<Ball>().hand == this && GameManager.Instance.ballThrownBy != gameObject)
+				{
+					GameManager.Instance.ballThrownBy = gameObject;
+					GameManager.Instance.score++;
+				}
 
 				//Debug.Log ("ATTRAPER");
 			}
@@ -66,6 +67,7 @@ public class OvrAvatarHand : MonoBehaviour, IAvatarPart
 				currentGrabbedObject.GetComponent<Rigidbody> ().angularVelocity = OVRInput.GetLocalControllerAngularVelocity (controller).eulerAngles;
 
 				currentGrabbedObject = null;
+				GameManager.Instance.ballThrownBy = gameObject;
 
                 proximityFeedback = false;
                 Invoke("restoreFeedback", 0.5f);
