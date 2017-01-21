@@ -7,7 +7,6 @@ public class GameManager : MonoBehaviour
 	public static GameManager Instance;
 	public GameObject P1Playground;
 	public GameObject P2Playground;
-	public bool forceStartGame = false;
 	public bool GameIsStarted = false;
 	GameObject ball;
 	public GameObject explosionFX;
@@ -30,14 +29,11 @@ public class GameManager : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		if (!GameIsStarted) {
+		if (!GameIsStarted) 
+		{
 			if (P1Playground.GetComponent<Playground> ().validGameState && P2Playground.GetComponent<Playground> ().validGameState) 
 			{
 				StartGame ();
-			}
-			if (forceStartGame) {
-				forceStartGame = false;
-				StartGame ();				
 			}
 		} 
 		else 

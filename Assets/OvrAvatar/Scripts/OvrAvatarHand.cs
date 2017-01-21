@@ -43,12 +43,17 @@ public class OvrAvatarHand : MonoBehaviour, IAvatarPart
 				currentGrabbedObject.transform.localPosition = Vector3.zero;
 				currentGrabbedObject.GetComponent<Rigidbody> ().useGravity = false;
 				currentGrabbedObject.GetComponent<Rigidbody> ().isKinematic = true;
+				currentGrabbedObject.GetComponent<Ball> ().hand = this;
+
 				int channel = controller == OVRInput.Controller.LTouch ? 0 : 1;
 				OVRHaptics.Channels [channel].Mix(new OVRHapticsClip(hapticForceMax, stdVibrationDuration));
 
+				Debug.Log (currentGrabbedObject.GetComponent<Ball> ().hand.name + " viens d'attraper une balle");
+				Debug.Log ("cette balle était envoyé par " + GameManager.Instance.ballThrownBy);
+
 				if (currentGrabbedObject.GetComponent<Ball>().hand == this && GameManager.Instance.ballThrownBy != gameObject)
 				{
-					GameManager.Instance.ballThrownBy = gameObject;
+					Debug.Log (name + "a bien attraper la balle envoyé par " + GameManager.Instance.ballThrownBy.name);
 					GameManager.Instance.score++;
 				}
 
@@ -62,12 +67,14 @@ public class OvrAvatarHand : MonoBehaviour, IAvatarPart
 				currentGrabbedObject.transform.parent = null;
 				currentGrabbedObject.GetComponent<Rigidbody> ().useGravity = true;
 				currentGrabbedObject.GetComponent<Rigidbody> ().isKinematic = false;
+				currentGrabbedObject.GetComponent<Ball> ().hand = null;
 
 				currentGrabbedObject.GetComponent<Rigidbody> ().velocity = OVRInput.GetLocalControllerVelocity (controller);
 				currentGrabbedObject.GetComponent<Rigidbody> ().angularVelocity = OVRInput.GetLocalControllerAngularVelocity (controller).eulerAngles;
 
 				currentGrabbedObject = null;
 				GameManager.Instance.ballThrownBy = gameObject;
+				Debug.Log ("balle envoyé par " + GameManager.Instance.ballThrownBy);
 
                 proximityFeedback = false;
                 Invoke("restoreFeedback", 0.5f);
