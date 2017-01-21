@@ -24,7 +24,7 @@ public class OvrAvatarHand : MonoBehaviour, IAvatarPart
 
 	public void Update()
 	{		
-		if (OVRInput.GetDown (OVRInput.Button.Two, controller))
+		if (OVRInput.GetDown (OVRInput.Button.PrimaryThumbstickUp, controller))
 		{
 			GameManager.Instance.RespawnBall ();
 		}
@@ -35,6 +35,7 @@ public class OvrAvatarHand : MonoBehaviour, IAvatarPart
 				return;
 			}
             if (OVRInput.GetDown(OVRInput.Button.One, controller)
+                || OVRInput.GetDown(OVRInput.Button.Two, controller)
                 || OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger, controller)
                 || OVRInput.GetDown(OVRInput.Button.PrimaryHandTrigger, controller))
             {
@@ -52,6 +53,7 @@ public class OvrAvatarHand : MonoBehaviour, IAvatarPart
 		else
         {
             if (!(OVRInput.Get(OVRInput.Button.One, controller)
+                || OVRInput.Get(OVRInput.Button.Two, controller)
                 || OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger, controller)
                 || OVRInput.Get(OVRInput.Button.PrimaryHandTrigger, controller)))
 			{
