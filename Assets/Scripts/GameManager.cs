@@ -62,4 +62,10 @@ public class GameManager : MonoBehaviour
 		ball.GetComponent<Rigidbody> ().velocity = Vector3.zero;
 		ball.GetComponent<Rigidbody> ().angularVelocity = Vector3.zero;
 	}
+
+	public void OnAvatarLoad(GameObject leftHand)
+	{
+		leftHand.GetComponentInChildren<SkinnedMeshRenderer> ().enabled = false;
+		
+	}
 }
