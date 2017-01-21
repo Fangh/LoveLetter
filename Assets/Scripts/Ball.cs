@@ -3,7 +3,8 @@ using System.Collections;
 
 public class Ball : MonoBehaviour {
 
-    OvrAvatarHand hand;
+    [HideInInspector]
+    public OvrAvatarHand hand;
     Material mat;
     Color stdColor = Color.red;
     Color heldColor = new Color (0.3f, 1, 0.3f);
@@ -33,6 +34,7 @@ public class Ball : MonoBehaviour {
         if (other.GetComponent<OvrAvatarHand>() == hand)
         {
             mat.color = stdColor;
+            GameManager.Instance.ballThrown = true;
         }
     }
 }
