@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class Playground : MonoBehaviour {
@@ -8,8 +8,8 @@ public class Playground : MonoBehaviour {
     bool headsetPresent = false;
     public bool validGameState = false;
     Material mat;
-    Color errorColor = new Color(1f, 0.3f, 0.3f, 0.1f);
-    Color validColor = new Color(0.3f, 1, 0.3f, 0.1f);
+    Color errorColor = new Color(1f, 0.3f, 0.3f, 0.5f);
+    Color validColor = new Color(0.3f, 1, 0.3f, 0.5f);
 
 	// Use this for initialization
 	void Start () {

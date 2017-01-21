@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using DG.Tweening;
 
 public class GameManager : MonoBehaviour 
 {
@@ -10,6 +11,11 @@ public class GameManager : MonoBehaviour
 	bool GameIsStarted = false;
 	GameObject ball;
 
+	void Awake()
+	{
+		Instance = this;
+	}
+
 	// Use this for initialization
 	void Start () 
 	{
@@ -19,19 +25,24 @@ public class GameManager : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		if (!GameIsStarted) 
-		{
+		if (!GameIsStarted) {
 			if (P1Playground.GetComponent<Playground> ().validGameState && P2Playground.GetComponent<Playground> ().validGameState) 
 			{
 				StartGame ();
 			}
-			if (forceStartGame) 
-			{
+			if (forceStartGame) {
 				forceStartGame = false;
 				StartGame ();				
 			}
+		} 
+		else 
+		{
+			if (!(P1Playground.GetComponent<Playground> ().validGameState && P2Playground.GetComponent<Playground> ().validGameState)) 
+			{
+				GameIsStarted = false;
+				ball.transform.position = new Vector3 (100, 100, 100);
+			}
 		}
-	
 	}
 
 	void StartGame()
@@ -43,10 +54,9 @@ public class GameManager : MonoBehaviour
 	public void RespawnBall()
 	{
 		Debug.Log ("SUMMON BALL");
-		//ball.transform.DOMove (transform.position, 1f).SetEase (Ease.InCubic);
-		ball.transform.position = transform.position;
+		ball.transform.DOMove (transform.position, 0.5f).SetEase (Ease.OutQuint);
+		//ball.transform.position = transform.position;
 		ball.GetComponent<Rigidbody> ().velocity = Vector3.zero;
 		ball.GetComponent<Rigidbody> ().angularVelocity = Vector3.zero;
-		
 	}
 }
