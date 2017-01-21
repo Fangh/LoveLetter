@@ -11,7 +11,8 @@ public class OvrAvatarHand : MonoBehaviour, IAvatarPart
 	private GameObject currentGrabbedObject = null;
 	public OVRInput.Controller controller;
 	public AudioClip vibratesound;
-	private byte[] vibrateTab; 
+	private byte[] vibrateTab;
+    const int stdVibrationDuration = 180; // En Hertz
 
 	void Start()
 	{
@@ -88,7 +89,7 @@ public class OvrAvatarHand : MonoBehaviour, IAvatarPart
 
 	public byte[] createByteTab()
 	{
-		byte[] tab = new byte[320];
+        byte[] tab = new byte[stdVibrationDuration];
 		for (int i = 0; i < tab.Length; i++)
 		{
 			tab[i] = (byte)((Mathf.Sin(i)*255));
