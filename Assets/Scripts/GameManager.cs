@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
 	public bool forceStartGame = false;
 	bool GameIsStarted = false;
 	GameObject ball;
+	public GameObject explosionFX;
 
 	void Awake()
 	{
@@ -54,8 +55,10 @@ public class GameManager : MonoBehaviour
 	public void RespawnBall()
 	{
 		Debug.Log ("SUMMON BALL");
-		ball.transform.DOMove (transform.position, 0.5f).SetEase (Ease.OutQuint);
-		//ball.transform.position = transform.position;
+		//ball.transform.DOMove (transform.position, 0.5f).SetEase (Ease.OutQuint);
+		GameObject.Instantiate (explosionFX, ball.transform.position, Quaternion.identity);
+		ball.transform.position = transform.position;
+		GameObject.Instantiate (explosionFX, ball.transform.position, Quaternion.identity);
 		ball.GetComponent<Rigidbody> ().velocity = Vector3.zero;
 		ball.GetComponent<Rigidbody> ().angularVelocity = Vector3.zero;
 	}
