@@ -8,8 +8,8 @@ public class Playground : MonoBehaviour {
     bool headsetPresent = false;
     public bool validGameState = false;
     Material mat;
-    Color errorColor = new Color(1f, 0.3f, 0.3f, 0.1f);
-    Color validColor = new Color(0.3f, 1, 0.3f, 0.1f);
+    Color errorColor = new Color(1f, 0.3f, 0.3f);
+    Color validColor = new Color(0.3f, 1, 0.3f);
 
 	// Use this for initialization
 	void Start () {
@@ -34,19 +34,24 @@ public class Playground : MonoBehaviour {
         {
             if (needHeadset && other.GetComponent<OVRCameraRig>() != null)
             {
-                headsetPresent = other.GetComponent<OVRCameraRig>() != null;
+                headsetPresent = (other.GetComponent<OVRCameraRig>() != null);
             }
             if (other.GetComponent<OvrAvatarHand>() != null)
             {
-                validGameState = needHeadset ? (headsetPresent && hand == other.GetComponent<OvrAvatarHand>()) : hand == other.GetComponent<OvrAvatarHand>();
+                validGameState = needHeadset ? (headsetPresent && checkHand(other.GetComponent<OvrAvatarHand>()) ) : checkHand(other.GetComponent<OvrAvatarHand>());
             }
         } 
+    }
+
+    bool checkHand(OvrAvatarHand unknownHand)
+    {
+        return (hand == unknownHand);
     }
 
     void OnTriggerExit(Collider other)
     {
         if (hand != null) {
-            validGameState = (hand == other.GetComponent<OvrAvatarHand>());
+            validGameState = checkHand(other.GetComponent<OvrAvatarHand>());
         }
     }
 }
