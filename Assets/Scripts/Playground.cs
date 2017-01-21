@@ -4,6 +4,8 @@ using System.Collections;
 public class Playground : MonoBehaviour {
 
     OvrAvatarHand hand = null;
+    public bool needHeadset = false;
+    bool headsetPresent = false;
     public bool validGameState = false;
     Material mat;
     Color errorColor = new Color(1f, 0.3f, 0.3f, 0.1f);
@@ -28,9 +30,16 @@ public class Playground : MonoBehaviour {
                 hand = other.GetComponent<OvrAvatarHand>();
             }
         }
-        else if (other.GetComponent<OvrAvatarHand>() != null)
+        else
         {
-            validGameState = (hand == other.GetComponent<OvrAvatarHand>());
+            if (needHeadset && other.GetComponent<OVRCameraRig>() != null)
+            {
+                headsetPresent = other.GetComponent<OVRCameraRig>() != null;
+            }
+            if (other.GetComponent<OvrAvatarHand>() != null)
+            {
+                validGameState = needHeadset ? (headsetPresent && hand == other.GetComponent<OvrAvatarHand>()) : hand == other.GetComponent<OvrAvatarHand>();
+            }
         }
             
     }
