@@ -40,7 +40,13 @@ public class Playground : MonoBehaviour {
             {
                 validGameState = needHeadset ? (headsetPresent && hand == other.GetComponent<OvrAvatarHand>()) : hand == other.GetComponent<OvrAvatarHand>();
             }
+        } 
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (hand != null) {
+            validGameState = (hand == other.GetComponent<OvrAvatarHand>());
         }
-            
     }
 }
