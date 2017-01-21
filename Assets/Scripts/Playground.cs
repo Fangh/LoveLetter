@@ -51,7 +51,9 @@ public class Playground : MonoBehaviour {
 
     void OnTriggerExit(Collider other)
     {
-        if (hand != null) {
+        if (hand != null) 
+		{
+			hand = checkHand (other.GetComponent<OvrAvatarHand> ()) ? other.GetComponent<OvrAvatarHand> () : null;
             validGameState = checkHand(other.GetComponent<OvrAvatarHand>());
         }
     }

@@ -71,7 +71,7 @@ public class GameManager : MonoBehaviour
 
 	public void OnAvatarLoad(GameObject leftHand)
 	{
-		leftHand.GetComponentInChildren<SkinnedMeshRenderer> ().enabled = false;
-		
+		if( leftHand.GetComponentInChildren<SkinnedMeshRenderer> () )
+			leftHand.GetComponentInChildren<SkinnedMeshRenderer> ().enabled = false;		
 	}
 }
