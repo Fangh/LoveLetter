@@ -7,11 +7,68 @@ ModelImporter:
   fileIDToRecycleName:
     100000: BUREAU2
     100002: //RootNode
+    100004: BUREAU
+    100006: BUREAU 1
+    100008: LETTRE
+    100010: LETTRE1
+    100012: LETTRE2
+    100014: LETTRE3
+    100016: LETTRE4
+    100018: pCube36
+    100020: pCylinder3
+    100022: pPipe1
+    100024: pPipe2
+    100026: pPlane2
     400000: BUREAU2
     400002: //RootNode
+    400004: BUREAU
+    400006: BUREAU 1
+    400008: LETTRE
+    400010: LETTRE1
+    400012: LETTRE2
+    400014: LETTRE3
+    400016: LETTRE4
+    400018: pCube36
+    400020: pCylinder3
+    400022: pPipe1
+    400024: pPipe2
+    400026: pPlane2
     2300000: BUREAU2
+    2300002: BUREAU 1
+    2300004: LETTRE
+    2300006: LETTRE1
+    2300008: LETTRE2
+    2300010: LETTRE3
+    2300012: LETTRE4
+    2300014: pCube36
+    2300016: pCylinder3
+    2300018: pPipe1
+    2300020: pPipe2
+    2300022: pPlane2
     3300000: BUREAU2
+    3300002: BUREAU 1
+    3300004: LETTRE
+    3300006: LETTRE1
+    3300008: LETTRE2
+    3300010: LETTRE3
+    3300012: LETTRE4
+    3300014: pCube36
+    3300016: pCylinder3
+    3300018: pPipe1
+    3300020: pPipe2
+    3300022: pPlane2
     4300000: BUREAU2
+    4300002: BUREAU
+    4300004: LETTRE
+    4300006: LETTRE1
+    4300008: LETTRE2
+    4300010: pCube36
+    4300012: pPlane2
+    4300014: pPipe1
+    4300016: pCylinder3
+    4300018: pPipe2
+    4300020: LETTRE3
+    4300022: LETTRE4
   materials:
     importMaterials: 1
     materialName: 0
