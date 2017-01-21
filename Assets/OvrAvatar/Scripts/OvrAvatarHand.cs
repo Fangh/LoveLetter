@@ -49,7 +49,7 @@ public class OvrAvatarHand : MonoBehaviour, IAvatarPart
 				int channel = controller == OVRInput.Controller.LTouch ? 0 : 1;
 				OVRHaptics.Channels [channel].Mix(new OVRHapticsClip(hapticForceMax, stdVibrationDuration));
 
-				Debug.Log ("ATTRAPER");
+				//Debug.Log ("ATTRAPER");
 			}
 		} 
 		else
@@ -67,7 +67,7 @@ public class OvrAvatarHand : MonoBehaviour, IAvatarPart
 
                 proximityFeedback = false;
                 Invoke("restoreFeedback", 0.5f);
-				Debug.Log ("LACHER");				
+				//Debug.Log ("LACHER");				
 			}
 		}
 	}
@@ -76,7 +76,7 @@ public class OvrAvatarHand : MonoBehaviour, IAvatarPart
 	{
 		if (other.tag == "Ball") 
 		{
-			Debug.Log ("TOUCH BALL");
+			//Debug.Log ("TOUCH BALL");
 			currentTouchedObject = other.gameObject;
 		}
 	}
@@ -94,7 +94,7 @@ public class OvrAvatarHand : MonoBehaviour, IAvatarPart
 	{
 		if (other.tag == "Ball") 
 		{
-			Debug.Log ("UNTOUCH BALL");
+			//Debug.Log ("UNTOUCH BALL");
 			currentTouchedObject = null;
 		}
 	}

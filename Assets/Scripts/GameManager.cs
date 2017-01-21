@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour
 
 	public void RespawnBall()
 	{
-		Debug.Log ("SUMMON BALL");
+		//Debug.Log ("SUMMON BALL");
 		//ball.transform.DOMove (transform.position, 0.5f).SetEase (Ease.OutQuint);
 		GameObject.Instantiate (explosionFX, ball.transform.position, Quaternion.identity);
 		ball.transform.position = transform.position;

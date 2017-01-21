@@ -18,6 +18,7 @@ public class Playground : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		Debug.Log (name + "valid ? " + validGameState);
         mat.color = validGameState ? validColor : errorColor;
 	}
 
@@ -32,13 +33,13 @@ public class Playground : MonoBehaviour {
         }
         else
         {
-            if (needHeadset && other.GetComponent<OVRCameraRig>() != null)
+            if (needHeadset && other.tag == "MainCamera")
             {
-                headsetPresent = (other.GetComponent<OVRCameraRig>() != null);
+				headsetPresent = true;
             }
             if (other.GetComponent<OvrAvatarHand>() != null)
             {
-                validGameState = needHeadset ? (headsetPresent && checkHand(other.GetComponent<OvrAvatarHand>()) ) : checkHand(other.GetComponent<OvrAvatarHand>());
+				validGameState = needHeadset ? (headsetPresent && checkHand(other.GetComponent<OvrAvatarHand>()) ) : checkHand(other.GetComponent<OvrAvatarHand>());
             }
         } 
     }

@@ -20,16 +20,18 @@ public class Ball : MonoBehaviour {
 	
 	}
 
+
+	void OnCollisionEnter(Collision other) {
+		Debug.Log ("COLLISION !!");
+		if (other.gameObject.tag == "DeadZone")
+			GameManager.Instance.RespawnBall();
+	}
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("DeadZone")) GameManager.Instance.RespawnBall();
-        else
+        if (other.GetComponent<OvrAvatarHand>() != null)
         {
-            if (other.GetComponent<OvrAvatarHand>() != null)
-            {
-                hand = other.GetComponent<OvrAvatarHand>();
-                mat.color = heldColor;
-            }
+            hand = other.GetComponent<OvrAvatarHand>();
+            mat.color = heldColor;
         }
     }
 
