@@ -12,8 +12,9 @@ public class LevelManager : MonoBehaviour {
     public GameObject[] levelsContainer;
     public Vector3[] P1_Offset;
     public Vector3[] P2_Offset;
+    public int[] scoreTresholds;
     public GameObject P1, P2;
-    public GameObject P1_hand, P2_hand;
+    public GameObject P1_heaset, P1_hand, P2_hand;
 	public GameObject sceneryIsland;
 	public GameObject sceneryMoon;
 
@@ -36,7 +37,9 @@ public class LevelManager : MonoBehaviour {
         if (levelsContainer[newLevel] != null)
 			levelsContainer[newLevel].SetActive(true);
         currentLevel = newLevel;
+        GameManager.Instance.scoreThreshold = scoreTresholds[newLevel];
         P1.transform.localPosition = P1_Offset[newLevel];
+        P1_heaset.transform.localPosition = P1_Offset[newLevel];
         P1_hand.transform.localPosition = P1_Offset[newLevel];
         P2.transform.localPosition = P2_Offset[newLevel];
         P2_hand.transform.localPosition = P2_Offset[newLevel];
