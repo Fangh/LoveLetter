@@ -89,14 +89,20 @@ public class OvrAvatarHand : MonoBehaviour, IAvatarPart
 	{
 		if (other.tag == "Ball") 
 		{
-			//Debug.Log ("TOUCH BALL");
-			currentTouchedObject = other.gameObject;
+			//currentTouchedObject = other.gameObject;
 		}
 	}
 
 	public void OnTriggerStay(Collider other)
 	{
-		if (proximityFeedback && other.tag == "Ball" && currentGrabbedObject == null) 
+		if (!currentTouchedObject && other.tag == "Ball")
+		{
+			Debug.Log ("TOUCH BALL");
+			currentTouchedObject = other.gameObject;
+			currentTouchedObject.transform.DOScale (new Vector3 (8, 8, 8), 0.1f).SetLoops(-1, LoopType.Yoyo);			
+		}
+		
+		if (other.tag == "Ball" && currentGrabbedObject == null) 
 		{
 			int channel = controller == OVRInput.Controller.LTouch ? 0 : 1;
 			OVRHaptics.Channels [channel].Mix(new OVRHapticsClip(hapticForceLow, 10));			
@@ -108,6 +114,8 @@ public class OvrAvatarHand : MonoBehaviour, IAvatarPart
 		if (other.tag == "Ball") 
 		{
 			//Debug.Log ("UNTOUCH BALL");
+			currentTouchedObject.transform.DOKill ();
+			currentTouchedObject.transform.localScale = new Vector3 (6.5f, 6.5f, 6.5f);
 			currentTouchedObject = null;
 		}
 	}
