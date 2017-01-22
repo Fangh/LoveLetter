@@ -46,9 +46,9 @@ public class GameManager : MonoBehaviour
             if (score >= scoreThreshold)
             {
 				GetComponent<AudioSource> ().PlayOneShot (SFX_nextLevel);
-				fireworks.Play ();
+                fireworks.Play();
+                score = 0;
                 LevelManager.Instance.SetUpNewLevel(LevelManager.Instance.currentLevel+1);
-				score = 0;
 				Debug.Log("Game complete");
             }
 		}
