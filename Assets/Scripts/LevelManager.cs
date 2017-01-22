@@ -12,8 +12,9 @@ public class LevelManager : MonoBehaviour {
     public GameObject[] levelsContainer;
     public Vector3[] P1_Offset;
     public Vector3[] P2_Offset;
+    public int[] scoreTresholds;
     public GameObject P1, P2;
-    public GameObject P1_hand, P2_hand;
+    public GameObject P1_heaset, P1_hand, P2_hand;
 	public GameObject sceneryIsland;
 	public GameObject sceneryMoon;
 
@@ -22,12 +23,6 @@ public class LevelManager : MonoBehaviour {
         Instance = this;
     }
 
-	void Update()
-	{
-		if (Input.GetKeyDown (KeyCode.A))
-			SetupNewScenery (sceneryIsland, sceneryMoon, -1.16f);
-	
-	}
     public void SetUpNewLevel(int newLevel)
     {
 		Debug.Log ("going now to level " + newLevel+1);
@@ -36,10 +31,13 @@ public class LevelManager : MonoBehaviour {
         if (levelsContainer[newLevel] != null)
 			levelsContainer[newLevel].SetActive(true);
         currentLevel = newLevel;
+        GameManager.Instance.scoreThreshold = scoreTresholds[newLevel];
         P1.transform.localPosition = P1_Offset[newLevel];
+        P1_heaset.transform.localPosition = P1_Offset[newLevel];
         P1_hand.transform.localPosition = P1_Offset[newLevel];
         P2.transform.localPosition = P2_Offset[newLevel];
         P2_hand.transform.localPosition = P2_Offset[newLevel];
+        if (newLevel == 5) SetupNewScenery(sceneryIsland, sceneryMoon, -1.16f);
     }
 
 	public void SetupNewScenery(GameObject oldScenery, GameObject newScenery, float newGravity = -9.81f)

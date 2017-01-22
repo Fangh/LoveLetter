@@ -46,9 +46,9 @@ public class GameManager : MonoBehaviour
             if (score >= scoreThreshold)
             {
 				GetComponent<AudioSource> ().PlayOneShot (SFX_nextLevel);
-				fireworks.Play ();
+                fireworks.Play();
+                score = 0;
                 LevelManager.Instance.SetUpNewLevel(LevelManager.Instance.currentLevel+1);
-				score = 0;
 				Debug.Log("Game complete");
             }
 		}
@@ -65,6 +65,7 @@ public class GameManager : MonoBehaviour
 	{
 		//Debug.Log ("SUMMON BALL");
 		//ball.transform.DOMove (transform.position, 0.5f).SetEase (Ease.OutQuint);
+		ballThrownBy = null;
         GameManager.Instance.score = 0;
 		GameObject.Instantiate (explosionFX, ball.transform.position, Quaternion.identity);
 		ball.transform.position = transform.position;
