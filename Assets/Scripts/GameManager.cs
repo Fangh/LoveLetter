@@ -29,6 +29,8 @@ public class GameManager : MonoBehaviour
 	void Start () 
 	{
 		ball = GameObject.FindWithTag ("Ball");	
+
+		scoreThreshold = LevelManager.Instance.scoreTresholds [0];
 	}
 	
 	// Update is called once per frame
@@ -58,7 +60,6 @@ public class GameManager : MonoBehaviour
     {
         LevelManager.Instance.startGame();
 		GameIsStarted = true;
-		instructions.SetActive(false);
 		RespawnBall ();
 	}
 
@@ -79,6 +80,7 @@ public class GameManager : MonoBehaviour
 	public void AddScore()
 	{
 		score++;
+		Debug.Log (score);
 		GetComponent<AudioSource> ().PlayOneShot (SFX_win[ Random.Range(0, SFX_win.Count) ]);
 	}
 }
