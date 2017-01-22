@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using DG.Tweening;
+using UnityStandardAssets.ImageEffects;
 
 public class LevelManager : MonoBehaviour {
 
@@ -12,12 +14,20 @@ public class LevelManager : MonoBehaviour {
     public Vector3[] P2_Offset;
     public GameObject P1, P2;
     public GameObject P1_hand, P2_hand;
+	public GameObject sceneryIsland;
+	public GameObject sceneryMoon;
 
     void Awake()
-    {
+	{
         Instance = this;
     }
 
+	void Update()
+	{
+		if (Input.GetKeyDown (KeyCode.A))
+			SetupNewScenery (sceneryIsland, sceneryMoon, -1.16f);
+	
+	}
     public void SetUpNewLevel(int newLevel)
     {
 		Debug.Log ("going now to level " + newLevel+1);
@@ -31,4 +41,20 @@ public class LevelManager : MonoBehaviour {
         P2.transform.localPosition = P2_Offset[newLevel];
         P2_hand.transform.localPosition = P2_Offset[newLevel];
     }
+
+	public void SetupNewScenery(GameObject oldScenery, GameObject newScenery, float newGravity = -9.81f)
+	{
+		DOTween.To (() => GameObject.Find ("CenterEyeAnchor").GetComponent<VignetteAndChromaticAberration> ().intensity,
+			x => GameObject.Find ("CenterEyeAnchor").GetComponent<VignetteAndChromaticAberration> ().intensity = x,
+			1, 1).SetLoops(2, LoopType.Yoyo);
+		StartCoroutine (ModifyScene(1f, oldScenery, newScenery, newGravity));
+	}
+
+	private IEnumerator ModifyScene(float waitTime, GameObject oldScenery, GameObject newScenery, float newGravity)
+	{
+		yield return new WaitForSeconds (waitTime);
+		oldScenery.SetActive (false);
+		newScenery.SetActive (true);
+		Physics.gravity = new Vector3 (0, newGravity, 0);
+	}
 }
