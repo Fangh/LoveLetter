@@ -176,6 +176,7 @@ MonoBehaviour:
   P1_heaset: {fileID: 2115066504}
   P1_hand: {fileID: 1775160700}
   P2_hand: {fileID: 1279907730}
+  sceneryIntro: {fileID: 0}
   sceneryIsland: {fileID: 1115923395}
   sceneryMoon: {fileID: 1822446670}
 --- !u!1 &52431707 stripped
@@ -703,6 +704,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77e19ec58d4a9e844970103e5bd8946a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &643548319
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1056885182}
+    m_Modifications:
+    - target: {fileID: 4000010188360204, guid: 25def0630bf7e2f4994f6556323cf7ea, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -6.494935
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010188360204, guid: 25def0630bf7e2f4994f6556323cf7ea, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -4.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010188360204, guid: 25def0630bf7e2f4994f6556323cf7ea, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.5282185
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010188360204, guid: 25def0630bf7e2f4994f6556323cf7ea, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010188360204, guid: 25def0630bf7e2f4994f6556323cf7ea, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0.25881904
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010188360204, guid: 25def0630bf7e2f4994f6556323cf7ea, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010188360204, guid: 25def0630bf7e2f4994f6556323cf7ea, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.9659259
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010188360204, guid: 25def0630bf7e2f4994f6556323cf7ea, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 25def0630bf7e2f4994f6556323cf7ea, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &707344596
 GameObject:
   m_ObjectHideFlags: 0
@@ -1813,6 +1856,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4ede30793311f7a478f9bd39de89e2bf, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &1056885182 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4000010614363468, guid: 4ede30793311f7a478f9bd39de89e2bf,
+    type: 2}
+  m_PrefabInternal: {fileID: 1056885181}
 --- !u!1001 &1086738747
 Prefab:
   m_ObjectHideFlags: 0
