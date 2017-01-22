@@ -8,11 +8,11 @@ public class GameManager : MonoBehaviour
 	public GameObject P1Playground;
 	public GameObject P2Playground;
 	public bool forceStartGame = false;
-	bool GameIsStarted = false;
+	public bool GameIsStarted = false;
 	GameObject ball;
 	public GameObject explosionFX;
     public int scoreThreshold = 3;
-    public bool ballThrown = false;
+	public GameObject ballThrownBy = null;
     public int score = 0;
 	public GameObject instructions;
 
@@ -45,6 +45,7 @@ public class GameManager : MonoBehaviour
             if (score >= scoreThreshold)
             {
                 LevelManager.Instance.SetUpNewLevel(LevelManager.Instance.currentLevel+1);
+				score = 0;
 				Debug.Log("Game complete");
             }
 		}

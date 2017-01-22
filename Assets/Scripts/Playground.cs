@@ -4,7 +4,7 @@ using System.Collections;
 public class Playground : MonoBehaviour {
 
     OvrAvatarHand hand = null;
-    public bool needHeadset = false;
+    public bool isPlayerOnePlayground = false;
     bool headsetPresent = false;
     public bool validGameState = false;
     Material mat;
@@ -18,43 +18,37 @@ public class Playground : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.Log (name + "valid ? " + validGameState);
+		//Debug.Log (name + "valid ? " + validGameState);
         mat.color = validGameState ? validColor : errorColor;
+
+
+		if (hand && hand.controller == OVRInput.Controller.LTouch && !isPlayerOnePlayground
+			|| hand && hand.controller == OVRInput.Controller.RTouch && isPlayerOnePlayground && headsetPresent)
+		{
+			validGameState = true;
+		}
 	}
 
-    void OnTriggerStay(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         if (hand == null)
         {
-            if (other.GetComponent<OvrAvatarHand>() != null)
+			if (other.GetComponent<OvrAvatarHand>() != null 
+				&& other.GetComponent<OvrAvatarHand>().controller == OVRInput.Controller.LTouch
+				&& !isPlayerOnePlayground )
             {
                 hand = other.GetComponent<OvrAvatarHand>();
             }
+			if (other.GetComponent<OvrAvatarHand>() != null 
+				&& other.GetComponent<OvrAvatarHand>().controller == OVRInput.Controller.RTouch
+				&& isPlayerOnePlayground )
+			{
+				hand = other.GetComponent<OvrAvatarHand>();
+			}
         }
-        else
+        if (isPlayerOnePlayground && other.tag == "MainCamera")
         {
-            if (needHeadset && other.tag == "MainCamera")
-            {
-				headsetPresent = true;
-            }
-            if (other.GetComponent<OvrAvatarHand>() != null)
-            {
-				validGameState = needHeadset ? (headsetPresent && checkHand(other.GetComponent<OvrAvatarHand>()) ) : checkHand(other.GetComponent<OvrAvatarHand>());
-            }
-        } 
-    }
-
-    bool checkHand(OvrAvatarHand unknownHand)
-    {
-        return (hand == unknownHand);
-    }
-
-    void OnTriggerExit(Collider other)
-    {
-        if (hand != null) 
-		{
-			hand = checkHand (other.GetComponent<OvrAvatarHand> ()) ? other.GetComponent<OvrAvatarHand> () : null;
-            validGameState = checkHand(other.GetComponent<OvrAvatarHand>());
+			headsetPresent = true;
         }
     }
 }

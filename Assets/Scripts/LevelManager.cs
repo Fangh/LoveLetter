@@ -20,8 +20,11 @@ public class LevelManager : MonoBehaviour {
 
     public void SetUpNewLevel(int newLevel)
     {
-        if (levelsContainer[currentLevel] != null) levelsContainer[currentLevel].SetActive(false);
-        if (levelsContainer[newLevel] != null) levelsContainer[newLevel].SetActive(true);
+		Debug.Log ("going now to level " + newLevel);
+        if (levelsContainer[currentLevel] != null)
+			levelsContainer[currentLevel].SetActive(false);
+        if (levelsContainer[newLevel] != null)
+			levelsContainer[newLevel].SetActive(true);
         currentLevel = newLevel;
         P1.transform.localPosition = P1_Offset[newLevel];
         P1_hand.transform.localPosition = P1_Offset[newLevel];

@@ -22,7 +22,7 @@ public class Ball : MonoBehaviour {
 
 
 	void OnCollisionEnter(Collision other) {
-		Debug.Log ("COLLISION !!");
+		//Debug.Log ("COLLISION !!");
 		if (other.gameObject.tag == "DeadZone")
 			GameManager.Instance.RespawnBall();
 	}
@@ -40,7 +40,6 @@ public class Ball : MonoBehaviour {
         if (other.GetComponent<OvrAvatarHand>() == hand)
         {
             mat.color = stdColor;
-            GameManager.Instance.ballThrown = true;
         }
     }
 }

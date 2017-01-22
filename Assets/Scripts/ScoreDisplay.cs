@@ -12,7 +12,13 @@ public class ScoreDisplay : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update () 
+	{
+		if (!GameManager.Instance.GameIsStarted)
+		{
+			scoreDisplay.text = "NO SCORE";
+			return;
+		}
         if (scoreDisplay != null)
         {
             scoreDisplay.text = GameManager.Instance.score + " / " + GameManager.Instance.scoreThreshold;
