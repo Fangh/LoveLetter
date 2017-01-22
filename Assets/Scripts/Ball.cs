@@ -30,7 +30,6 @@ public class Ball : MonoBehaviour {
     {
         if (other.GetComponent<OvrAvatarHand>() != null)
         {
-            hand = other.GetComponent<OvrAvatarHand>();
             mat.color = heldColor;
         }
     }

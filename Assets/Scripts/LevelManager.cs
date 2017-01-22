@@ -20,7 +20,7 @@ public class LevelManager : MonoBehaviour {
 
     public void SetUpNewLevel(int newLevel)
     {
-		Debug.Log ("going now to level " + newLevel);
+		Debug.Log ("going now to level " + newLevel+1);
         if (levelsContainer[currentLevel] != null)
 			levelsContainer[currentLevel].SetActive(false);
         if (levelsContainer[newLevel] != null)
