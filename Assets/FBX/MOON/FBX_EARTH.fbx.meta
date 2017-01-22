@@ -1,35 +1,27 @@
 fileFormatVersion: 2
-guid: 38dd11547a45f26418783d243addd874
-timeCreated: 1485037262
+guid: a9e67efb04b8c5e4e8de02260d8f8487
+timeCreated: 1485040201
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: pSphere10_MeshPart0
-    100004: pSphere10_MeshPart1
-    100006: FBX_MOON_MeshPart0
-    100008: FBX_MOON_MeshPart1
-    400000: //RootNode
-    400002: pSphere10_MeshPart0
-    400004: pSphere10_MeshPart1
-    400006: FBX_MOON_MeshPart0
-    400008: FBX_MOON_MeshPart1
-    2300000: pSphere10_MeshPart0
-    2300002: pSphere10_MeshPart1
-    2300004: FBX_MOON_MeshPart0
-    2300006: FBX_MOON_MeshPart1
-    2300008: //RootNode
-    3300000: pSphere10_MeshPart0
-    3300002: pSphere10_MeshPart1
-    3300004: FBX_MOON_MeshPart0
-    3300006: FBX_MOON_MeshPart1
-    3300008: //RootNode
-    4300000: pSphere10_MeshPart0
-    4300002: pSphere10_MeshPart1
-    4300004: FBX_MOON_MeshPart0
-    4300006: FBX_MOON_MeshPart1
-    4300008: FBX_MOON
+    100000: FBX_EARTH
+    100002: //RootNode
+    100004: FBX_EARTH1
+    100006: FBX_EARTH_GROUND
+    400000: FBX_EARTH
+    400002: //RootNode
+    400004: FBX_EARTH1
+    400006: FBX_EARTH_GROUND
+    2300000: FBX_EARTH
+    2300002: FBX_EARTH1
+    2300004: FBX_EARTH_GROUND
+    3300000: FBX_EARTH
+    3300002: FBX_EARTH1
+    3300004: FBX_EARTH_GROUND
+    4300000: FBX_EARTH
+    4300002: FBX_EARTH_GROUND
+    4300004: FBX_EARTH1
   materials:
     importMaterials: 1
     materialName: 0
