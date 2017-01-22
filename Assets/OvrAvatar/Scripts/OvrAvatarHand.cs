@@ -50,7 +50,9 @@ public class OvrAvatarHand : MonoBehaviour, IAvatarPart
 				//Debug.Log (currentGrabbedObject.GetComponent<Ball> ().hand.name + " viens d'attraper une balle");
 				//Debug.Log ("cette balle était envoyé par " + GameManager.Instance.ballThrownBy);
 
-				if (currentGrabbedObject.GetComponent<Ball>().hand == this && GameManager.Instance.ballThrownBy != gameObject)
+				if (currentGrabbedObject.GetComponent<Ball>().hand == this 
+					&& GameManager.Instance.ballThrownBy != null 
+					&& GameManager.Instance.ballThrownBy != gameObject)
 				{
 					//Debug.Log (name + "a bien attraper la balle envoyé par " + GameManager.Instance.ballThrownBy.name);
 					GameManager.Instance.AddScore ();

@@ -65,6 +65,7 @@ public class GameManager : MonoBehaviour
 	{
 		//Debug.Log ("SUMMON BALL");
 		//ball.transform.DOMove (transform.position, 0.5f).SetEase (Ease.OutQuint);
+		ballThrownBy = null;
         GameManager.Instance.score = 0;
 		GameObject.Instantiate (explosionFX, ball.transform.position, Quaternion.identity);
 		ball.transform.position = transform.position;
