@@ -479,12 +479,59 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 715366511}
   m_LocalRotation: {x: -0, y: 0.6087605, z: -0, w: 0.79335415}
-  m_LocalPosition: {x: 0, y: 1.122, z: 0}
-  m_LocalScale: {x: 0.8, y: 1.5, z: 0.8}
+  m_LocalPosition: {x: 0, y: 0.46, z: 0}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1416197263}
   m_RootOrder: 0
+--- !u!1 &489181643
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 489181644}
+  - 95: {fileID: 489181645}
+  m_Layer: 0
+  m_Name: MOONROCKS_ROTATE (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &489181644
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 489181643}
+  m_LocalRotation: {x: -0.9848078, y: -0.0000000074505815, z: -0, w: 0.17364827}
+  m_LocalPosition: {x: -0.36000013, y: -31.3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: -160, y: 0, z: 0}
+  m_Children:
+  - {fileID: 904007662}
+  m_Father: {fileID: 1962326975}
+  m_RootOrder: 2
+--- !u!95 &489181645
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 489181643}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d9e832c789081dd4ab2eea3319ba4228, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &565378449
 GameObject:
   m_ObjectHideFlags: 0
@@ -700,6 +747,72 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 707344596}
   m_Mesh: {fileID: 4300002, guid: 5c109eae575302642beeb5d433e7bbb1, type: 3}
+--- !u!1 &709885386
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 709885387}
+  - 33: {fileID: 709885389}
+  - 23: {fileID: 709885388}
+  m_Layer: 0
+  m_Name: FBX_MOON_ROcKS (45)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &709885387
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 709885386}
+  m_LocalRotation: {x: -0.27306157, y: 0.73206943, z: 0.25819707, w: 0.5681954}
+  m_LocalPosition: {x: 3.596153, y: 35.34, z: 4.9533014}
+  m_LocalScale: {x: 1.116742, y: 3.1052566, z: 1.0269812}
+  m_LocalEulerAnglesHint: {x: -43.496002, y: -252.56999, z: 351.79}
+  m_Children: []
+  m_Father: {fileID: 1378470683}
+  m_RootOrder: 0
+--- !u!23 &709885388
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 709885386}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 712def524d2894045a9779475be51c25, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!33 &709885389
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 709885386}
+  m_Mesh: {fileID: 4300000, guid: 60be2d4af0497be479d66cadb939a31a, type: 3}
 --- !u!1 &715366511
 GameObject:
   m_ObjectHideFlags: 0
@@ -1008,6 +1121,166 @@ MonoBehaviour:
   transformToFollow: {fileID: 430309246}
   offset: {x: 0, y: 0, z: -0.4}
   smooth: 0.1
+--- !u!1 &779123964
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 779123965}
+  - 95: {fileID: 779123966}
+  m_Layer: 0
+  m_Name: MOONROCKS_ROTATE
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &779123965
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 779123964}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.36000013, y: -31.3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 50, y: 0, z: 0}
+  m_Children:
+  - {fileID: 1896467744}
+  m_Father: {fileID: 1962326975}
+  m_RootOrder: 0
+--- !u!95 &779123966
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 779123964}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9b3fb258652f43049abf4deb9f7a6d2c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!1 &833825328
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 833825329}
+  - 95: {fileID: 833825330}
+  m_Layer: 0
+  m_Name: MOONROCKS_ROTATE (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &833825329
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 833825328}
+  m_LocalRotation: {x: 0.60876155, y: -0, z: -0.000000029802322, w: -0.79335326}
+  m_LocalPosition: {x: -0.36000013, y: -31.3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 666.8703, y: 0, z: 0}
+  m_Children:
+  - {fileID: 876245697}
+  m_Father: {fileID: 1962326975}
+  m_RootOrder: 4
+--- !u!95 &833825330
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 833825328}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5def8d3c31e190c4483279e0219642a7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!1 &876245696
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 876245697}
+  - 33: {fileID: 876245699}
+  - 23: {fileID: 876245698}
+  m_Layer: 0
+  m_Name: FBX_MOON_ROcKS (45)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &876245697
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 876245696}
+  m_LocalRotation: {x: -0.27306157, y: 0.73206943, z: 0.25819707, w: 0.5681954}
+  m_LocalPosition: {x: 3.596153, y: 35.34, z: 4.9533014}
+  m_LocalScale: {x: 0.529105, y: 1.1104742, z: 1.7066303}
+  m_LocalEulerAnglesHint: {x: -43.496002, y: -252.56999, z: 351.79}
+  m_Children: []
+  m_Father: {fileID: 833825329}
+  m_RootOrder: 0
+--- !u!23 &876245698
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 876245696}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 712def524d2894045a9779475be51c25, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!33 &876245699
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 876245696}
+  m_Mesh: {fileID: 4300000, guid: 60be2d4af0497be479d66cadb939a31a, type: 3}
 --- !u!1 &878472206
 GameObject:
   m_ObjectHideFlags: 0
@@ -1038,6 +1311,72 @@ Transform:
   - {fileID: 1135495003}
   m_Father: {fileID: 0}
   m_RootOrder: 5
+--- !u!1 &904007661
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 904007662}
+  - 33: {fileID: 904007664}
+  - 23: {fileID: 904007663}
+  m_Layer: 0
+  m_Name: FBX_MOON_ROcKS (45)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &904007662
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 904007661}
+  m_LocalRotation: {x: -0.5095139, y: 0.2998917, z: 0.7781074, w: 0.21215445}
+  m_LocalPosition: {x: 3.596153, y: 35.34, z: 4.9533014}
+  m_LocalScale: {x: 1.2584153, y: 1.2058219, z: 0.7751434}
+  m_LocalEulerAnglesHint: {x: -43.066, y: -183.64499, z: 178.13}
+  m_Children: []
+  m_Father: {fileID: 489181644}
+  m_RootOrder: 0
+--- !u!23 &904007663
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 904007661}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 712def524d2894045a9779475be51c25, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!33 &904007664
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 904007661}
+  m_Mesh: {fileID: 4300000, guid: 60be2d4af0497be479d66cadb939a31a, type: 3}
 --- !u!1 &905701345
 GameObject:
   m_ObjectHideFlags: 0
@@ -1715,6 +2054,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hand: {fileID: 0}
+--- !u!1001 &1089932596
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4000013469100042, guid: ce74042703ee0d94389d51d120c037b3, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 1.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013469100042, guid: ce74042703ee0d94389d51d120c037b3, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013469100042, guid: ce74042703ee0d94389d51d120c037b3, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 2.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013469100042, guid: ce74042703ee0d94389d51d120c037b3, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013469100042, guid: ce74042703ee0d94389d51d120c037b3, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0.8575224
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013469100042, guid: ce74042703ee0d94389d51d120c037b3, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013469100042, guid: ce74042703ee0d94389d51d120c037b3, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.51444656
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013469100042, guid: ce74042703ee0d94389d51d120c037b3, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: ce74042703ee0d94389d51d120c037b3, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1115923395 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1000012973633654, guid: d5a8888321877ca4f836d9fde6bddc96,
@@ -1799,6 +2180,72 @@ Transform:
   - {fileID: 763972194}
   m_Father: {fileID: 1997670420}
   m_RootOrder: 0
+--- !u!1 &1222397449
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1222397450}
+  - 33: {fileID: 1222397452}
+  - 23: {fileID: 1222397451}
+  m_Layer: 0
+  m_Name: FBX_MOON_ROcKS (45)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1222397450
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1222397449}
+  m_LocalRotation: {x: 0.06450992, y: 0.3073108, z: -0.67598873, w: 0.6666617}
+  m_LocalPosition: {x: 1.2825359, y: 34.829998, z: -6.075844}
+  m_LocalScale: {x: 1.0678833, y: 2.2490354, z: 1.2236015}
+  m_LocalEulerAnglesHint: {x: 30.082, y: -456.018, z: 275.01}
+  m_Children: []
+  m_Father: {fileID: 1412513044}
+  m_RootOrder: 0
+--- !u!23 &1222397451
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1222397449}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 712def524d2894045a9779475be51c25, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!33 &1222397452
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1222397449}
+  m_Mesh: {fileID: 4300000, guid: 60be2d4af0497be479d66cadb939a31a, type: 3}
 --- !u!1 &1245479333
 GameObject:
   m_ObjectHideFlags: 0
@@ -2034,6 +2481,100 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 126d619cf4daa52469682f85c1378b4a, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1378470682
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1378470683}
+  - 95: {fileID: 1378470684}
+  m_Layer: 0
+  m_Name: MOONROCKS_ROTATE (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1378470683
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1378470682}
+  m_LocalRotation: {x: -0.9396927, y: -0, z: -0, w: -0.34202015}
+  m_LocalPosition: {x: -0.36000013, y: -31.3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: -23.340729, y: 0, z: 0}
+  m_Children:
+  - {fileID: 709885387}
+  m_Father: {fileID: 1962326975}
+  m_RootOrder: 3
+--- !u!95 &1378470684
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1378470682}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: af91dc59f8814054ea4075618f52b4e5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!1 &1412513043
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1412513044}
+  - 95: {fileID: 1412513045}
+  m_Layer: 0
+  m_Name: MOONROCKS_ROTATE (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1412513044
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1412513043}
+  m_LocalRotation: {x: -0.087067194, y: 0.004768044, z: 0.023742022, w: 0.9959081}
+  m_LocalPosition: {x: -0.36000013, y: -31.3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 300, y: 4.8650002, z: -0.586}
+  m_Children:
+  - {fileID: 1222397450}
+  m_Father: {fileID: 1962326975}
+  m_RootOrder: 1
+--- !u!95 &1412513045
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1412513043}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5b5e55ac1b746ce4c90d53f0d92be37b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1416197262
 GameObject:
   m_ObjectHideFlags: 0
@@ -2147,8 +2688,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1888698101}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.947, z: -2}
-  m_LocalScale: {x: 0.8, y: 1.5, z: 0.8}
+  m_LocalPosition: {x: 0, y: 0.33, z: -2}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1193768159}
@@ -2454,53 +2995,7 @@ Transform:
 GameObject:
   m_PrefabParentObject: {fileID: 1000010005343016, guid: ce74042703ee0d94389d51d120c037b3,
     type: 2}
-  m_PrefabInternal: {fileID: 1826845102}
---- !u!1001 &1826845102
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4000013469100042, guid: ce74042703ee0d94389d51d120c037b3, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 1.61
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013469100042, guid: ce74042703ee0d94389d51d120c037b3, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 1.86
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013469100042, guid: ce74042703ee0d94389d51d120c037b3, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 2.59
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013469100042, guid: ce74042703ee0d94389d51d120c037b3, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013469100042, guid: ce74042703ee0d94389d51d120c037b3, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0.8575224
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013469100042, guid: ce74042703ee0d94389d51d120c037b3, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013469100042, guid: ce74042703ee0d94389d51d120c037b3, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.51444656
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013469100042, guid: ce74042703ee0d94389d51d120c037b3, type: 2}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000010005343016, guid: ce74042703ee0d94389d51d120c037b3, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: ce74042703ee0d94389d51d120c037b3, type: 2}
-  m_IsPrefabParent: 0
+  m_PrefabInternal: {fileID: 1089932596}
 --- !u!1 &1888698101
 GameObject:
   m_ObjectHideFlags: 0
@@ -2605,6 +3100,72 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!1 &1896467743
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1896467744}
+  - 33: {fileID: 1896467746}
+  - 23: {fileID: 1896467745}
+  m_Layer: 0
+  m_Name: FBX_MOON_ROcKS (45)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1896467744
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1896467743}
+  m_LocalRotation: {x: -0.5095139, y: 0.2998917, z: 0.7781074, w: 0.21215445}
+  m_LocalPosition: {x: 3.596153, y: 35.34, z: 4.9533014}
+  m_LocalScale: {x: 1.2584153, y: 1.2058219, z: 0.7751434}
+  m_LocalEulerAnglesHint: {x: -43.066, y: -183.64499, z: 178.13}
+  m_Children: []
+  m_Father: {fileID: 779123965}
+  m_RootOrder: 0
+--- !u!23 &1896467745
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1896467743}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 712def524d2894045a9779475be51c25, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!33 &1896467746
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1896467743}
+  m_Mesh: {fileID: 4300000, guid: 60be2d4af0497be479d66cadb939a31a, type: 3}
 --- !u!1 &1939268200
 GameObject:
   m_ObjectHideFlags: 0
@@ -2759,9 +3320,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1962326975}
-  - 33: {fileID: 1962326978}
-  - 23: {fileID: 1962326977}
-  - 64: {fileID: 1962326976}
   m_Layer: 0
   m_Name: Level 9
   m_TagString: Untagged
@@ -2776,65 +3334,18 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1962326974}
-  m_LocalRotation: {x: -0, y: 0.08365182, z: -0, w: 0.99649507}
-  m_LocalPosition: {x: 3.562, y: 1.83, z: 3.228}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: -65.58501, z: 0}
-  m_Children: []
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 779123965}
+  - {fileID: 1412513044}
+  - {fileID: 489181644}
+  - {fileID: 1378470683}
+  - {fileID: 833825329}
   m_Father: {fileID: 20874409}
   m_RootOrder: 4
---- !u!64 &1962326976
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 64000012916481240, guid: d5a8888321877ca4f836d9fde6bddc96,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1962326974}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 0
-  m_Mesh: {fileID: 4300000, guid: 493bc2306e0d6d44d9fc47cb705a4d1d, type: 3}
---- !u!23 &1962326977
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 23000011066666736, guid: d5a8888321877ca4f836d9fde6bddc96,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1962326974}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 2100000, guid: f399a4267e4b64947860e754a524627c, type: 2}
-  - {fileID: 2100000, guid: 2b34064d3dcb8094d935bc909b6b5c0a, type: 2}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
---- !u!33 &1962326978
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 33000012026992670, guid: d5a8888321877ca4f836d9fde6bddc96,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1962326974}
-  m_Mesh: {fileID: 4300000, guid: 493bc2306e0d6d44d9fc47cb705a4d1d, type: 3}
 --- !u!4 &1982437704
 Transform:
   m_ObjectHideFlags: 0
