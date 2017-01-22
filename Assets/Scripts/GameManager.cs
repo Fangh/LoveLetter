@@ -58,6 +58,7 @@ public class GameManager : MonoBehaviour
 	{
 		GameIsStarted = true;
 		instructions.SetActive(false);
+        LevelManager.Instance.startGame();
 		RespawnBall ();
 	}
 

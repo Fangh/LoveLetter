@@ -15,7 +15,8 @@ public class LevelManager : MonoBehaviour {
     public int[] scoreTresholds;
     public GameObject P1, P2;
     public GameObject P1_heaset, P1_hand, P2_hand;
-	public GameObject sceneryIsland;
+    public GameObject sceneryIntro;
+    public GameObject sceneryIsland;
 	public GameObject sceneryMoon;
 
     void Awake()
@@ -38,6 +39,11 @@ public class LevelManager : MonoBehaviour {
         P2.transform.localPosition = P2_Offset[newLevel];
         P2_hand.transform.localPosition = P2_Offset[newLevel];
         if (newLevel == 5) SetupNewScenery(sceneryIsland, sceneryMoon, -1.16f);
+    }
+
+    public void startGame()
+    {
+        SetupNewScenery(sceneryIntro, sceneryIsland);
     }
 
 	public void SetupNewScenery(GameObject oldScenery, GameObject newScenery, float newGravity = -9.81f)
