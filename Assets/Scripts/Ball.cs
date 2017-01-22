@@ -1,18 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
+using DG.Tweening;
 
 public class Ball : MonoBehaviour {
 
     [HideInInspector]
     public OvrAvatarHand hand;
-    Material mat;
-    Color stdColor = Color.red;
-    Color heldColor = new Color (0.25f, 0.9f, 0.25f);
 
 	// Use this for initialization
 	void Start () {
-        if (GetComponent<Collider>() == null) this.enabled = false;
-        mat = GetComponent<Renderer>().material;
 	}
 	
 	// Update is called once per frame
@@ -28,17 +24,18 @@ public class Ball : MonoBehaviour {
 	}
     void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent<OvrAvatarHand>() != null)
+        if (other.tag == "CatchSphere")
         {
-            mat.color = heldColor;
+			transform.DOScale (new Vector3 (8, 8, 8), 0.1f).SetLoops(-1, LoopType.Yoyo);
         }
     }
 
     void OnTriggerExit(Collider other)
     {
-        if (other.GetComponent<OvrAvatarHand>() == hand)
+		if (other.tag == "CatchSphere")
         {
-            mat.color = stdColor;
+			transform.DOKill ();
+			transform.localScale = new Vector3 (6.5f, 6.5f, 6.5f);
         }
     }
 }

@@ -10,7 +10,6 @@ public class OvrAvatarHand : MonoBehaviour, IAvatarPart
 	private GameObject currentTouchedObject = null;
 	private GameObject currentGrabbedObject = null;
 	public OVRInput.Controller controller;
-	public AudioClip vibratesound;
 	private byte[] hapticForceMax;
 	private byte[] hapticForceLow;
     const int stdVibrationDuration = 180; // En Hertz
