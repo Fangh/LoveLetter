@@ -55,7 +55,8 @@ public class GameManager : MonoBehaviour
 	}
 
 	void StartGame()
-	{
+    {
+        LevelManager.Instance.startGame();
 		GameIsStarted = true;
 		instructions.SetActive(false);
 		RespawnBall ();
@@ -79,11 +80,5 @@ public class GameManager : MonoBehaviour
 	{
 		score++;
 		GetComponent<AudioSource> ().PlayOneShot (SFX_win[ Random.Range(0, SFX_win.Count) ]);
-	}
-
-	public void OnAvatarLoad(GameObject leftHand)
-	{
-		if( leftHand.GetComponentInChildren<SkinnedMeshRenderer> () )
-			leftHand.GetComponentInChildren<SkinnedMeshRenderer> ().enabled = false;		
 	}
 }
