@@ -379,7 +379,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: 1
-  vibratesound: {fileID: 8300000, guid: 3079d19ad1b7cbe4d9acb5622613e371, type: 3}
   grabPoint: {fileID: 1570812450}
 --- !u!1 &431216812
 GameObject:
@@ -392,7 +391,7 @@ GameObject:
   - 135: {fileID: 431216814}
   m_Layer: 0
   m_Name: CatchSphere
-  m_TagString: Untagged
+  m_TagString: CatchSphere
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2010,7 +2009,7 @@ GameObject:
   - 135: {fileID: 1524146736}
   m_Layer: 0
   m_Name: CatchSphere
-  m_TagString: Untagged
+  m_TagString: CatchSphere
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2884,5 +2883,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: 2
-  vibratesound: {fileID: 8300000, guid: 3079d19ad1b7cbe4d9acb5622613e371, type: 3}
   grabPoint: {fileID: 2081982198}
