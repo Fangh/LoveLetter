@@ -55,10 +55,10 @@ public class GameManager : MonoBehaviour
 	}
 
 	void StartGame()
-	{
+    {
+        LevelManager.Instance.startGame();
 		GameIsStarted = true;
 		instructions.SetActive(false);
-        LevelManager.Instance.startGame();
 		RespawnBall ();
 	}
 
