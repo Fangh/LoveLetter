@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using DG.Tweening;
 
 public class GameManager : MonoBehaviour 
@@ -14,6 +15,10 @@ public class GameManager : MonoBehaviour
 	public GameObject ballThrownBy = null;
     public int score = 0;
 	public GameObject instructions;
+	public ParticleSystem fireworks;
+	public List<AudioClip> SFX_fail = new List<AudioClip>();
+	public List<AudioClip> SFX_win = new List<AudioClip>();
+	public AudioClip SFX_nextLevel;
 
 	void Awake()
 	{
@@ -40,6 +45,8 @@ public class GameManager : MonoBehaviour
 		{
             if (score >= scoreThreshold)
             {
+				GetComponent<AudioSource> ().PlayOneShot (SFX_nextLevel);
+				fireworks.Play ();
                 LevelManager.Instance.SetUpNewLevel(LevelManager.Instance.currentLevel+1);
 				score = 0;
 				Debug.Log("Game complete");
@@ -64,6 +71,13 @@ public class GameManager : MonoBehaviour
 		GameObject.Instantiate (explosionFX, ball.transform.position, Quaternion.identity);
 		ball.GetComponent<Rigidbody> ().velocity = Vector3.zero;
 		ball.GetComponent<Rigidbody> ().angularVelocity = Vector3.zero;
+		GetComponent<AudioSource> ().PlayOneShot (SFX_fail[ Random.Range(0, SFX_fail.Count) ]);
+	}
+
+	public void AddScore()
+	{
+		score++;
+		GetComponent<AudioSource> ().PlayOneShot (SFX_win[ Random.Range(0, SFX_win.Count) ]);
 	}
 
 	public void OnAvatarLoad(GameObject leftHand)

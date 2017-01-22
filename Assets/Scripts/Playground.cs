@@ -13,19 +13,20 @@ public class Playground : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        mat = GetComponent<Renderer>().material;
+		mat = GetComponent<Renderer>().material;
+		mat.color = errorColor;
+		mat.SetColor ("_EmissionColor", errorColor);
     }
 	
 	// Update is called once per frame
 	void Update () {
 		//Debug.Log (name + "valid ? " + validGameState);
-        mat.color = validGameState ? validColor : errorColor;
-
-
 		if (hand && hand.controller == OVRInput.Controller.LTouch && !isPlayerOnePlayground
 			|| hand && hand.controller == OVRInput.Controller.RTouch && isPlayerOnePlayground && headsetPresent)
 		{
 			validGameState = true;
+			mat.color = validColor;
+			mat.SetColor ("_EmissionColor", validColor);
 		}
 	}
 

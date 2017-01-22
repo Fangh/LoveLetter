@@ -48,13 +48,13 @@ public class OvrAvatarHand : MonoBehaviour, IAvatarPart
 				int channel = controller == OVRInput.Controller.LTouch ? 0 : 1;
 				OVRHaptics.Channels [channel].Mix(new OVRHapticsClip(hapticForceMax, stdVibrationDuration));
 
-				Debug.Log (currentGrabbedObject.GetComponent<Ball> ().hand.name + " viens d'attraper une balle");
-				Debug.Log ("cette balle était envoyé par " + GameManager.Instance.ballThrownBy);
+				//Debug.Log (currentGrabbedObject.GetComponent<Ball> ().hand.name + " viens d'attraper une balle");
+				//Debug.Log ("cette balle était envoyé par " + GameManager.Instance.ballThrownBy);
 
 				if (currentGrabbedObject.GetComponent<Ball>().hand == this && GameManager.Instance.ballThrownBy != gameObject)
 				{
-					Debug.Log (name + "a bien attraper la balle envoyé par " + GameManager.Instance.ballThrownBy.name);
-					GameManager.Instance.score++;
+					//Debug.Log (name + "a bien attraper la balle envoyé par " + GameManager.Instance.ballThrownBy.name);
+					GameManager.Instance.AddScore ();
 				}
 
 				//Debug.Log ("ATTRAPER");
@@ -74,7 +74,7 @@ public class OvrAvatarHand : MonoBehaviour, IAvatarPart
 
 				currentGrabbedObject = null;
 				GameManager.Instance.ballThrownBy = gameObject;
-				Debug.Log ("balle envoyé par " + GameManager.Instance.ballThrownBy);
+				//Debug.Log ("balle envoyé par " + GameManager.Instance.ballThrownBy);
 
                 proximityFeedback = false;
                 Invoke("restoreFeedback", 0.5f);
