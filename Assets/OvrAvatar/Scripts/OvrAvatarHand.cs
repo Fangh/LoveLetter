@@ -56,7 +56,7 @@ public class OvrAvatarHand : MonoBehaviour, IAvatarPart
 				{
 					//Debug.Log (name + "a bien attraper la balle envoyé par " + GameManager.Instance.ballThrownBy.name);
                     GameManager.Instance.AddScore();
-                    if (channel == 0) StoryManager.Instance.advanceStory();
+                    if (channel == 1) StoryManager.Instance.advanceStory();
 				}
 
 				//Debug.Log ("ATTRAPER");

@@ -170,7 +170,7 @@ MonoBehaviour:
   - {x: 0, y: 3, z: -2}
   - {x: 0, y: 0, z: -4}
   - {x: 0, y: 0, z: -4}
-  scoreTresholds: 04000000040000000400000004000000040000000400000004000000040000000400000004000000
+  scoreTresholds: 02000000020000000200000002000000020000000200000002000000020000000200000002000000
   P1: {fileID: 1416197262}
   P2: {fileID: 1193768158}
   P1_heaset: {fileID: 2115066504}
@@ -303,7 +303,7 @@ Prefab:
       propertyPath: m_Text
       value: "Take the \u201Chuman hand\u201D controller.\r\n\r\nGive the \u201Cbear
         hand\u201D controller to your partner who has no VR headset.\r\n\r\nHelp your
-        partner to take place in the green circle where the bear stand.\r\n\r\nTake
+        partner to take place in the red circle where the bear stand.\r\n\r\nTake
         place in the red circle behind the desk.\r"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1158,7 +1158,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.75
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &438229833
 GameObject:
@@ -1756,7 +1756,7 @@ Prefab:
       value: "Take the \u201Chuman hand\u201D controller.\r\n\r\nGive the \u201Cbear
         hand\u201D controller to your partner who has no VR headset.\r\n\r\nHelp your
         partner to take place in the red circle where the bear stand.\r\n\r\nTake
-        place in the green circle behind the desk.\r"
+        place in the red circle behind the desk.\r"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 25def0630bf7e2f4994f6556323cf7ea, type: 2}
@@ -2892,10 +2892,10 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 933034592}
-  m_LocalRotation: {x: -0.0718778, y: -0.9405421, z: 0.06784066, w: 0.32497966}
-  m_LocalPosition: {x: 4.414, y: 1.745, z: 3.093}
+  m_LocalRotation: {x: -0.04915118, y: -0.8894889, z: 0.09793558, w: -0.4436242}
+  m_LocalPosition: {x: 5.057, y: 1.508, z: 4.341}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 4.6000004, y: -141.188, z: 10.103001}
+  m_LocalEulerAnglesHint: {x: 12.526001, y: -232.75299, z: 0.031000001}
   m_Children: []
   m_Father: {fileID: 20874409}
   m_RootOrder: 0
@@ -5311,7 +5311,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.75
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1556531929
 GameObject:
@@ -6871,6 +6871,72 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2025461007}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &2030628259
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1056885182}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 32b69755243491a438053c235aa81143, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 32b69755243491a438053c235aa81143, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 32b69755243491a438053c235aa81143, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 32b69755243491a438053c235aa81143, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.0891461
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 32b69755243491a438053c235aa81143, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.9908361
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 32b69755243491a438053c235aa81143, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.009092957
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 32b69755243491a438053c235aa81143, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.10106591
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 32b69755243491a438053c235aa81143, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 32b69755243491a438053c235aa81143, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 32b69755243491a438053c235aa81143, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 32b69755243491a438053c235aa81143, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 32b69755243491a438053c235aa81143, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -168.811
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 32b69755243491a438053c235aa81143, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -2.0440001
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 32b69755243491a438053c235aa81143, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 9.819
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 32b69755243491a438053c235aa81143, type: 3}
+  m_IsPrefabParent: 0
 --- !u!1 &2042011927
 GameObject:
   m_ObjectHideFlags: 0
