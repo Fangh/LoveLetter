@@ -24,18 +24,9 @@ public class Ball : MonoBehaviour {
 	}
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "CatchSphere")
-        {
-			transform.DOScale (new Vector3 (8, 8, 8), 0.1f).SetLoops(-1, LoopType.Yoyo);
-        }
     }
 
     void OnTriggerExit(Collider other)
     {
-		if (other.tag == "CatchSphere")
-        {
-			transform.DOKill ();
-			transform.localScale = new Vector3 (6.5f, 6.5f, 6.5f);
-        }
     }
 }
