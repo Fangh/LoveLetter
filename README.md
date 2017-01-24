@@ -1,1 +1,1 @@
-[![Lettres d'Amour #GGJ2017](http://img.youtube.com/vi/StTqXEQ2l-Y/0.jpg)](https://www.youtube.com/watch?v=tXT1nalwndo "Lettres d'Amour #GGJ2017 ")
+[![Lettres d'Amour #GGJ2017](https://github.com/Fangh/LoveLetter/blob/master/2017-01-24%2011_18_39-Lettres%20d'Amour%20%23GGJ2017%20-%20YouTube.png)](https://www.youtube.com/watch?v=tXT1nalwndo "Lettres d'Amour #GGJ2017 ")
